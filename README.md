@@ -11,7 +11,6 @@ Julia で PyCall を使って Mecab を動かすやつ
 
 ## Pull
 
-Pull
 ```
 docker pull ramenjuniti/julia-pycall-mecab
 ```
