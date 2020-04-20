@@ -1,6 +1,6 @@
 # julia-pycall-mecab
 
-JuliaでPyCallを使ってMecabを動かせるDockerイメージ
+JuliaでPyCallを使ってMecabを動かすDockerイメージ
 
 辞書は[mecab-ipadic-neologd](https://github.com/neologd/mecab-ipadic-neologd)を利用
 
