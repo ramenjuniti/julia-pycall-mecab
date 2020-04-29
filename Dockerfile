@@ -18,7 +18,10 @@ RUN git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git\
     && cd mecab-ipadic-neologd\
     && bin/install-mecab-ipadic-neologd -n -y\
     && cd ..\
-    && rm -r mecab-ipadic-neologd
+    && rm -r mecab-ipadic-neologd\
+    && echo "export DIC=$(echo `mecab-config --dicdir`'/mecab-ipadic-neologd')" >> $HOME/.bashrc
+
+ENV DIC="$DIC"
 
 RUN julia -e 'using Pkg; Pkg.add("PyCall")'
 RUN julia -e 'ENV["PYTHON"]="/root/.julia/conda/3/bin/python"'

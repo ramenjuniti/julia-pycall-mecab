@@ -38,7 +38,8 @@ docker pull ramenjuniti/julia-pycall-mecab
 ```julia
 using PyCall
 MeCab = pyimport("MeCab")
-mecab = MeCab.Tagger("-d /usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd -Owakati")
+dic = ENV["DIC"]
+mecab = MeCab.Tagger("-d $dic -Owakati")
 println(mecab.parse("私はラーメンを食べたい。"))
 
 # 私 は ラーメン を 食べ たい 。
