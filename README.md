@@ -4,11 +4,6 @@ JuliaでPyCallを使ってMecabを動かすDockerイメージ
 
 辞書は[mecab-ipadic-neologd](https://github.com/neologd/mecab-ipadic-neologd)を利用
 
-辞書のパスは以下の通り
-```
-/usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd
-```
-
 ## Pull
 
 ```
